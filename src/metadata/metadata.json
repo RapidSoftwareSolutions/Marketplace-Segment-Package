@@ -1,0 +1,63 @@
+{
+  "package": "Segment",
+  "tagline": "Segment Webhooks Integration",
+  "description": "Segment makes it easy to send your data to Webhooks and lots of other integrations.",
+  "image": "https://logo.clearbit.com/segment.com",
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Segment-Package",
+  "keywords": [
+    "API",
+    "segment",
+    "analytics",
+    "integrations"
+  ],
+  "accounts": {
+    "domain": "segment.com",
+    "credentials": [
+    ]
+  },
+
+  "blocks": [
+    {
+      "name": "testBlock",
+      "description": "test block.",
+      "args": [
+      {
+        "name": "apiKey",
+        "type": "String",
+        "info": "Api Key.",
+        "required": false
+      }
+  ]}
+  ],
+  "events": [
+    {
+      "name": "webhookEvent",
+      "description": "Endpoint for webhook event",
+      "payload":
+      {
+        "version"       : 1,
+        "type"          : "page",
+        "userId"        : "019mr8mf4r",
+        "properties"    : {
+          "path"      : "/pricing",
+          "referrer"  : "https://segment.com",
+          "title"     : "Segment Pricing",
+          "url"       : "https://segment.com/pricing"
+        },
+        "timestamp" : "2012-12-02T00:30:08.276Z"
+      },
+      "steps": [
+        "Navigate to your Segment source dashboard",
+        "Find webhooks on the integrations tab",
+        "Set webhookUrl to __WEBHOOK_URL__"
+      ],
+      "args": [
+        {
+          "name": "token",
+          "type": "string",
+          "info": "Token sent on each message",
+          "required": false
+        }
+      ]
+    }]
+}
